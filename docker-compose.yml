@@ -1,0 +1,14 @@
+services:
+  date: 
+    image: ildarmjs/test-date
+    build: 
+      dockerfile: date.dockerfile
+  test: 
+    image: ildarmjs/test
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - date
