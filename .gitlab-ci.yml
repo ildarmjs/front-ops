@@ -1,0 +1,9 @@
+stages:
+  - install
+
+Npm ci:
+  stage: install
+  image: node:18
+  script:
+    - cd frontend
+    - npm ci
