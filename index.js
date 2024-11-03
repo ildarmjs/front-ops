@@ -7,7 +7,7 @@ const DATE_SERVICE_HOST =
 app.get('/', (req, res) => {
 	fetch(DATE_SERVICE_HOST)
 		.then(res => res.json())
-		.then(data => res.send(`Hello, current date is ${data}\n`))
+		.then(data => res.send(`Hello current date is ${data}\n`))
 })
 
 app.listen(3000, () => {
